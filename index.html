@@ -14,17 +14,28 @@
     </div>
     <div class="form">
         <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
-            <input type="text" id="add-todo" placeholder="Thing To-Do">
+            <input type="text" id="add-todo" placeholder="Things To-Do">
             <input type="submit" value="Add" class="btn btn-primary">
-            
+            <p>You have:</p>
+            <p id="counter"></p>
+            <table>
+                <tr class="to-do">
+                    <th><h3>To-Do:</h3></th>
+                </tr>
+                <tbody id="tasks">
+
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div id="edit-box" role="aria-hidden">
+        <form action="javascript:void(0);" method="POST" id="save-edit">
+            <input type="text" id="edit-todo">
+            <input type="submit" value="Save" class="btn btn-success">
+            <a onclick="CloseInput()" aria-label="Close">&#1006;</a>
         </form>
     </div>
 
-    <!-- <div class="container">
-        <div class="item item-1"></div>
-        <div class="item item-2"></div>
-        <div class="item item-3"></div>
-    </div> -->
     <script src="script.js"></script>
 </body>
 </html>
